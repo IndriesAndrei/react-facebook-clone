@@ -2,6 +2,14 @@ import '../styles/Header.css';
 import SearchIcon from '@mui/icons-material/Search';
 import HomeIcon from '@mui/icons-material/Home';
 import FlagIcon from '@mui/icons-material/Flag';
+import SubscriptionsIcon from '@mui/icons-material/Subscriptions';
+import StorefrontIco from '@mui/icons-material/Storefront';
+import SupervisedUserCircleIcon from '@mui/icons-material/SupervisedUserCircle';
+import { Avatar, IconButton } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
+import ForumIcon from '@mui/icons-material/Forum';
+import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 export default function Header() {
     return (
@@ -12,20 +20,47 @@ export default function Header() {
                 />
                 <div className='header_input'>
                     <SearchIcon />
-                    <input type="text" />
+                    <input type="text" placeholder='Search Facebook' />
                 </div>
             </div>
 
-            <div className='header_middle'>
-                <div className='header_option'>
+            <div className='header_center'>
+                <div className='header_option header_option-active'>
                     <HomeIcon fontSize='large'/>
                 </div>
                 <div className='header_option'>
                     <FlagIcon fontSize='large'/>
                 </div>
+                <div className='header_option'>
+                    <SubscriptionsIcon fontSize='large'/>
+                </div>
+                <div className='header_option'>
+                    <StorefrontIco fontSize='large'/>
+                </div>
+                <div className='header_option'>
+                    <SupervisedUserCircleIcon fontSize='large'/>
+                </div>
             </div>
 
-            <div className='header_right'></div>
+            <div className='header_right'>
+                <div className='header_info'>
+                    <Avatar />
+                    <h4>Andrei</h4>
+                </div>
+
+                <IconButton>
+                    <AddIcon fontSize='large' />
+                </IconButton>
+                <IconButton>
+                    <ForumIcon fontSize='large' />
+                </IconButton>
+                <IconButton>
+                    <NotificationsActiveIcon fontSize='large' />
+                </IconButton>
+                <IconButton>
+                    <ExpandMoreIcon fontSize='large' />
+                </IconButton>
+            </div>
         </div>
     )
 }
