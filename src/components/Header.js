@@ -10,8 +10,12 @@ import AddIcon from '@mui/icons-material/Add';
 import ForumIcon from '@mui/icons-material/Forum';
 import NotificationsActiveIcon from '@mui/icons-material/NotificationsActive';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { useStateValue } from '../StateProvider';
 
 export default function Header() {
+    // pull the user from React Context API
+    const [{user}, dispatch] = useStateValue();
+
     return (
         <div className="header">
             <div className="header_left">
@@ -44,8 +48,8 @@ export default function Header() {
 
             <div className='header_right'>
                 <div className='header_info'>
-                    <Avatar />
-                    <h4>Andrei</h4>
+                    <Avatar src={user.photoURL} />
+                    <h4>{user.displayName}</h4>
                 </div>
 
                 <IconButton>

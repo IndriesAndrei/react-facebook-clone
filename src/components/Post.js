@@ -15,7 +15,7 @@ export default function Post({ profilePic, image, username, timestamp, message }
                 />
                 <div className='post_topInfo'>
                     <h3>{username}</h3>
-                    <p>Timestamp</p>
+                    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
                 </div>
             </div>
 
